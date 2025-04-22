@@ -64,6 +64,41 @@ A nuvem **Azure** oferece vários benefícios:
 - **Governança**: Controle e conformidade com políticas de TI.
 - **Gerenciabilidade**: Ferramentas para gerenciar e monitorar recursos de nuvem.
 
+## Criação de Máquina Virtual no Azure
+
+Com base nas orientações existentes em https://learn.microsoft.com/pt-br/azure/virtual-machines/windows/quick-create-portal?WT.mc_id=UI_empg, foi criada uma máquina virtual no portal Azure conforme segue:
+
+### Opções de disponibilidade
+- **Zona de disponibilidade**: Zona auto-selecionada
+- **Zona de disponibilidade**: 1
+
+### Tipo de segurança
+- **Computadores virtuais de inicialização confiável**
+  - Habilitar inicialização segura: Sim
+  - Habilitar vTPM: Sim
+  - Monitoramento de integridade: Não
+
+### Imagem
+- **Windows Server 2022 Datacenter: Azure Edition Hotpatch – Gen2**
+- **Arquitetura de VM**: x64
+- **Tamanho**: Standard B1s (1 vcpu, 1 GiB memória)
+- **Habilitar Hibernação**: Não
+
+### Configurações de acesso
+- **Nome de usuário**: JWOH
+- **Portas de entrada públicas**: RDP
+- **Já possui uma licença do Windows?**: Não
+- **Azure Spot**: Não
+
+### Discos
+- **Tamanho do disco do SO**: Padrão de imagem
+- **Tipo de disco de SO**: LRS do SSD Premium
+- **Usar discos gerenciados**: Sim
+- **Excluir o disco do SO com a VM**: Habilitado
+- **Disco de SO efêmero**: Não
+
+Como até o momento não foi trabalhado no curso nenhum aspecto prático do uso da máquina virtual ou detalhes de configuração, o laboratório se baseou nas instruções da página e das informações genéricas da instrutura no curso. Foi testado também o copilot dentro do ambiente de configuração da Azure.
+
 ## Referências
 - *https://learn.microsoft.com/pt-br/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud*
 - *https://learn.microsoft.com/pt-br/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud*
